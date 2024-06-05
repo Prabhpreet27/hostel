@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>SmartStay</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: #ffffff; /* White background */
+      color: #333333;
+      position: relative; /* Add relative positioning */
+    }
+    .header {
+      background-color: #87CEEB; /* Sky blue color */
+      color: #ffffff; /* White text */
+      padding: 20px;
+      text-align: left; /* Align text to left */
+      font-family: "Lobster", sans-serif;
+      border-radius: 25px; /* Circular border radius */
+      display: flex; /* Make header a flex container */
+      justify-content: space-between; /* Space between elements */
+      align-items: center; /* Center vertically */
+      overflow: hidden; /* Hide overflow for circular border */
+    }
+    .logo {
+      color: #ffffff; /* White color */
+    }
+    .nav {
+      margin-right: 20px;
+    }
+    .nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+    .nav li {
+      margin: 0 10px; /* Add margin */
+    }
+    .nav a {
+      text-decoration: none;
+      color: #ffffff; /* White text */
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    .nav a:hover {
+      color: #f0f0f0; /* Light gray color on hover */
+    }
+    .main {
+      padding: 20px;
+    }
+    .box-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 20px 0;
+    }
+    .box {
+      background-color: #FFFFFF;
+      padding: 20px;
+      text-align: center;
+      margin: 10px;
+      border-radius: 10px;
+      border: 1px solid #EEEEEE;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      width: calc(33.33% - 20px);
+      max-width: 300px;
+    }
+    .box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    .box a {
+      color: #87CEEB; /* Sky blue color */
+    }
+    .box img {
+      width: 70px;
+      height: 70px;
+      margin-bottom: 10px;
+      color: #87CEEB; /* Sky blue color */
+    }
+    .box h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    .box p {
+      font-size: 16px;
+      color: #666;
+    }
+    .footer {
+      color: #87CEEB; /* Sky blue color */
+      background-color: #ffffff; /* White background */
+      padding: 10px;
+      text-align: center;
+      position: fixed; /* Fixed positioning */
+      left: 0;
+      bottom: 0;
+      width: 100%;
+    }
+    .user-button {
+      background-color: #87CEEB; /* Sky blue color */
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .user-button:hover {
+      background-color: #4682B4; /* Darker shade on hover */
+    }
+  </style>
+</head>
+<body>
+  <header class="header" style="background-color: #87CEEB; color: #ffffff;">
+    <h1 class="logo">SmartStay</h1> <!-- Align to the left -->
+    <nav class="nav">
+      <ul>
+        <li><a href="Index.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+        <!-- Login button renamed as User -->
+        <li><a href="Login.html" class="user-button">WELCOME User</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+    <h2>Services</h2>
+    <div class="box-container">
+      <div class="box">
+        <a href="NoticeBoard.html">
+          <i class="fas fa-exclamation-circle" style="font-size: 100px;"></i>
+        </a>
+        <h3>Notice Board</h3>
+        <p>Stay updated with the latest announcements.</p>
+      </div>
+
+      <div class="box">
+        <a href="attendance.html">
+          <i class="fas fa-calendar-check" style="font-size: 100px;"></i>
+        </a>
+        <h3>Attendance</h3>
+        <p>Stay updated with the latest attendance records.</p>
+      </div>
+      
+      <div class="box">
+        <a href="LeavePass.html">
+          <i class="fas fa-plane-departure" style="font-size: 100px;"></i>
+        </a>
+        <h3>Leave Pass</h3>
+        <p>Apply for leave.</p>
+      </div>
+      
+      <div class="box">
+        <a href="Fees.html">
+          <i class="fas fa-money-check" style="font-size: 100px;"></i>
+        </a>
+        <h3>Fees</h3>
+        <p>Manage your fees easily.</p>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <p>&copy; 2024 SmartStay</p>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', function() {
+      var footer = document.querySelector('.footer');
+      var position = footer.getBoundingClientRect();
+      if(position.top >= 0 && position.bottom <= window.innerHeight) {
+        footer.classList.add('show-footer');
+      } else {
+        footer.classList.remove('show-footer');
+      }
+    });
+  </script>
+</body>
+</html>
